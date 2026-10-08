@@ -1,0 +1,813 @@
+:root {
+  --bg-page: #FFF9F3;
+  --bg-sidebar: #ffffff;
+  --text-main: #333333;
+  --text-secondary: #888888;
+  --accent-orange: #FFB76B;
+  --accent-brown: #5A3B2E;
+  --border-color: #eeeeee;
+  --font-main: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-main);
+  color: var(--text-main);
+  background-color: var(--bg-page);
+  line-height: 1.5;
+}
+
+.layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Сайдбар */
+.sidebar {
+  width: 240px;
+  background-color: var(--bg-sidebar);
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid var(--border-color);
+  padding: 24px;
+}
+
+.logo-box {
+  margin-bottom: 32px;
+}
+
+.logo-img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  display: block;
+}
+
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: var(--text-main);
+  font-weight: 600;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.main-nav a:hover {
+  color: var(--accent-orange);
+}
+
+.sidebar-footer {
+  margin-top: auto;
+  padding-top: 20px;
+  border-top: 1px solid var(--border-color);
+}
+
+.sidebar-footer span {
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+/* Контент */
+.content {
+  flex: 1;
+  padding: 40px;
+  overflow-y: auto;
+}
+
+/* Hero-секция */
+.hero {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 48px;
+}
+
+.hero-illustration {
+  flex: 1;
+  min-height: 300px;
+  background-image: url('img/hero-illustration.png'); /* Заменить на путь к файлу */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left center;
+}
+
+.hero-text {
+  flex: 1;
+  text-align: right;
+}
+
+.hero-title {
+  font-size: 64px;
+  line-height: 1;
+  font-weight: 700;
+  color: var(--accent-brown);
+  margin-bottom: 12px;
+}
+
+.hero-subtitle {
+  font-size: 18px;
+  color: var(--accent-brown);
+  font-style: italic;
+}
+
+/* Welcome */
+.welcome {
+  margin-bottom: 64px;
+}
+
+.welcome-text {
+  font-size: 16px;
+  color: #444444;
+  max-width: 700px;
+}
+
+/* Registration */
+.registration {
+  margin-bottom: 64px;
+}
+
+.section-title {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.section-subtitle {
+  color: var(--text-secondary);
+  margin-bottom: 32px;
+}
+
+.reg-form {
+  max-width: 560px;
+}
+
+.form-group {
+  margin-bottom: 24px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  font-size: 16px;
+  font-family: inherit;
+}
+
+.date-input-wrapper {
+  position: relative;
+}
+
+.date-input-wrapper input {
+  width: 100%;
+  padding-right: 36px;
+}
+
+.icon-calendar {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-secondary);
+}
+
+.btn-primary {
+  width: 100%;
+  padding: 16px;
+  background-color: var(--accent-orange);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-primary:hover {
+  background-color: #e6a055;
+}
+
+/* Progress line */
+.progress-line {
+  margin-bottom: 64px;
+}
+
+.progress-items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 32px;
+  padding: 0 16px;
+}
+
+.progress-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+  text-align: center;
+}
+
+.progress-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: #FFF5ED;
+  color: var(--accent-brown);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--border-color);
+}
+
+.progress-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.progress-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+/* Day card */
+.day-card {
+  max-width: 560px;
+  background: white;
+  padding: 32px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+}
+
+.day-icon-wrapper {
+  width: 64px;
+  height: 64px;
+  background-color: #FFF5ED;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent-brown);
+  margin-bottom: 16px;
+}
+
+.day-icon {
+  width: 32px;
+  height: 32px;
+}
+
+.day-title {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.day-checklist {
+  list-style: none;
+}
+
+.day-checklist li {
+  position: relative;
+  padding-left: 28px;
+  margin-bottom: 12px;
+  color: #444444;
+}
+
+.day-checklist li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 6px;
+  width: 12px;
+  height: 12px;
+  background-color: var(--accent-orange);
+  border-radius: 50%;
+}
+
+/* Адаптив */
+@media (max-width: 900px) {
+  .layout {
+    flex-direction: column;
+  }
+  .sidebar {
+    width: 100%;
+    height: auto;
+    border-right: none;
+    border-bottom: 1px solid var(--border-color);
+    padding: 20px;
+  }
+  .content {
+    padding: 20px;
+  }
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+  .hero-illustration,
+  .hero-text {
+    flex: none;
+    width: 100%;
+  }
+  .hero-text {
+    margin-top: 24px;
+    text-align: center;
+  }
+  .hero-title {
+    font-size: 48px;
+  }
+  .progress-items {
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  .progress-item {
+    flex: 0 0 calc(50% - 8px);
+  }
+}
+/* Модальное окно: фон-затемнение */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 1000;
+}
+
+/* Показываем окно, если в URL есть #shopping-modal */
+.modal-overlay:target {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Само окно */
+.modal-window {
+  background: #FFFDF9; /* кремовый, как на макете */
+  padding: 24px;
+  border-radius: 16px;
+  width: 90%;
+  max-width: 800px;
+  position: relative;
+  box-shadow: 0 10px 32px rgba(0, 0, 0, 0.12);
+  transform: translateY(-20px);
+  transition: transform 0.3s ease;
+}
+
+.modal-overlay:target .modal-window {
+  transform: translateY(0);
+}
+
+/* Кнопка закрытия */
+.modal-close {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  background: none;
+  border: none;
+  font-size: 28px;
+  line-height: 1;
+  color: #333;
+  cursor: pointer;
+  padding: 0;
+  line-height: 1;
+}
+
+.modal-close:hover {
+  color: #d32129;
+}
+
+/* Заголовок модалки */
+.modal-title {
+  font-family: 'Cormorant Garamond', serif; /* или любой шрифт как на макете */
+  font-size: 32px;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 24px;
+  color: #5c3e2a;
+}
+
+/* Сетка магазинов (из прошлого ответа) */
+.stores-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+}
+
+.store-card {
+  background: white;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+.store-card-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.store-logo {
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  color: white;
+  font-size: 16px;
+}
+
+.store-name {
+  font-size: 16px;
+  font-weight: 700;
+  color: #5c3e2a;
+}
+
+.store-desc {
+  font-size: 12px;
+  color: #888;
+  margin-bottom: 10px;
+}
+
+.store-items {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.store-items li {
+  font-size: 14px;
+  color: #444;
+  margin-bottom: 6px;
+}
+
+.store-illustration {
+  position: absolute;
+  bottom: -8px;
+  right: -8px;
+  width: 100px;
+  height: 100px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 0;
+  opacity: 0.9;
+}
+.hero-illustration {
+  width: 240px;
+  height: 240px;
+  background-size: contain;   /* чтобы картинка не обрезалась */
+  background-repeat: no-repeat;
+  margin: 0 auto 32px auto;    /* центрируем саму иконку по горизонтали */
+}
+
+/* Скрываем весь текст внутри карточки (заголовок, описание, списки) */
+.store-card h3,
+.store-card .subtitle,
+.store-card ul,
+.store-card li,
+.store-card p {
+  display: none;
+}
+
+/* Находим картинку (предполагаемый селектор — подстрой под свой класс) */
+.store-card .promo-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;       /* или contain — чтобы картинка не искажалась */
+  display: block;
+  border-radius: 8px;      /* если нужно сохранить скругление плашки */
+}
+
+/* Опционально: убираем внутренние отступы, чтобы картинка заняла всё место */
+.store-card {
+  padding: 0;
+  overflow: hidden;
+}
+
+/* Цвета логотипов */
+.store-card--magnit .store-logo { background-color: #D32129; }
+.store-card--pyaterochka .store-logo { background-color: #E5333A; }
+.store-card--perekrestok .store-logo { background-color: #2E8B57; }
+.store-card--dm .store-logo { background-color: #0057B8; }
+
+/* Заглушки для иллюстраций (если нет картинок) */
+.magnit-img { background-image: url('img/magnit-illustration.png'); }
+.pyaterochka-img { background-image: url('img/pyaterochka-illustration.png'); }
+.perekrestok-img { background-image: url('img/perekrestok-illustration.png'); }
+.dm-img { background-image: url('img/dm-illustration.png'); }
+
+/* 1. Фиксируем структуру карточки: текст сверху, картинка снизу */
+.store-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  gap: 12px; /* Расстояние между логотипом и иллюстрацией */
+  box-sizing: border-box;
+  min-height: 220px; /* Гарантирует место под увеличенную картинку */
+}
+
+/* 2. Блок с логотипом и названием (текст) */
+.store-header {
+  width: 100%;
+  text-align: center;
+  z-index: 2;
+  position: relative;
+  margin: 0;
+}
+
+/* 3. Контейнер для иллюстрации — увеличиваем область видимости */
+.store-illustration {
+  width: 100%;
+  height: 140px; /* Фиксированная высота для всех карточек, чтобы масштаб был единым */
+  margin: 0 auto;
+  display: block;
+  flex-shrink: 0; /* Запрещаем сжиматься */
+}
+
+/* 4. Применяем твои классы с иллюстрациями, но меняем логику отображения */
+.magnit-img,
+.pyaterochka-img,
+.perekrestok-img,
+.dm-img {
+  width: 100%;
+  height: 100%;
+  background-size: contain; /* Картинка целиком, не обрезается */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: transparent; /* Убираем лишний фон, если есть */
+}
+
+/* 5. Убираем любые абсолютные позиционирования, которые вызывают наезды */
+.store-card--magnit .store-logo,
+.store-card--pyaterochka .store-logo,
+.store-card--perekrestok .store-logo,
+.store-card--dm .store-logo {
+  position: static; /* Отменяем position: absolute, если он был */
+  float: none;
+}
+/* 1. Контейнер сетки: 2 колонки вместо 3 */
+.stores-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* 2 равные колонки */
+  grid-template-rows: auto auto;  /* 2 ряда по контенту */
+  gap: 16px;                       /* Отступы между плашками */
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+/* 2. Карточка магазина — фиксируем структуру: текст сверху, иллюстрация снизу */
+.store-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  gap: 10px;                       /* Отступ между заголовком и картинкой */
+  box-sizing: border-box;
+  min-height: 240px;               /* Гарантируем высоту для 2x2 и крупного изображения */
+}
+
+/* 3. Блок с названием магазина (текст) — строго над картинкой */
+.store-header {
+  width: 100%;
+  text-align: center;
+  z-index: 2;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+.store-header .store-logo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 8px;
+}
+
+.store-header .store-name {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.2;
+  color: #333;
+}
+
+/* 4. Контейнер для иллюстрации — крупный размер, без наездов */
+.store-illustration {
+  width: 100%;
+  height: 130px;                   /* Фиксированная высота для единообразия */
+  margin: 0 auto;
+  display: block;
+  flex-shrink: 0;
+}
+
+/* 5. Применяем твои классы с иллюстрациями */
+.magnit-img,
+.pyaterochka-img,
+.perekrestok-img,
+.dm-img {
+  width: 100%;
+  height: 100%;
+  background-size: contain;        /* Картинка целиком, без обрезки */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: transparent;
+}
+
+/* 6. Сброс любых абсолютных позиционирований, вызывающих наезды */
+.store-card--magnit .store-logo,
+.store-card--pyaterochka .store-logo,
+.store-card--perekrestok .store-logo,
+.store-card--dm .store-logo {
+  position: static;
+  float: none;
+}
+
+/* 7. Адаптив: на очень узких экранах можно вернуть 1 колонку */
+@media (max-width: 480px) {
+  .stores-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.store-card--magnit::before,
+.store-card--magnit::after,
+.store-card--pyaterochka::before,
+.store-card--pyaterochka::after,
+.store-card--perekrestok::before,
+.store-card--perekrestok::after,
+.store-card--dm::before,
+.store-card--dm::after {
+  content: none !important;
+  display: none !important;
+}
+
+/* Контейнер этапа: центрируем всё содержимое */
+.progress-stage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  text-align: center;
+  max-width: 500px; /* Ограничиваем ширину списка, чтобы он не растягивался */
+  margin: 0 auto;
+}
+
+/* Обертка для иконки и подписи под ней */
+.stage-icon-wrapper {
+  position: relative;
+  margin-bottom: 40px; /* Большой отступ до списка задач */
+}
+
+/* Сама иконка: делаем её большой */
+.stage-icon {
+  width: 120px;   /* Размер иконки (можно менять) */
+  height: 120px;
+  color: #333;    /* Цвет контура */
+  fill: none;     /* Чтобы работала как контурная иконка */
+  stroke: currentColor;
+  stroke-width: 2;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Подпись "1 день" под иконкой */
+.stage-label {
+  display: block;
+  margin-top: 16px;
+  font-size: 24px;
+  font-weight: 700;
+  color: #333;
+  letter-spacing: 0.5px;
+}
+
+/* Список задач: убираем маркеры, добавляем свои точки */
+.stage-tasks {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left; /* Текст выравниваем по левому краю, а не по центру */
+  width: 100%;
+}
+
+.stage-tasks li {
+  position: relative;
+  padding-left: 24px; /* Место под точку */
+  margin-bottom: 12px;
+  line-height: 1.5;
+  color: #444;
+  font-size: 16px;
+}
+
+/* Рисуем точки-маркеры вручную */
+.stage-tasks li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 5px;
+  width: 8px;
+  height: 8px;
+  background-color: #FF8A65; /* Цвет точки как на фото */
+  border-radius: 50%;
+}
+
+/* Адаптив: на мобильных уменьшаем иконку */
+@media (max-width: 480px) {
+  .stage-icon {
+    width: 90px;
+    height: 90px;
+  }
+  .stage-label {
+    font-size: 20px;
+  }
+}
+/* Контейнер для каждого этапа (круг + подпись) */
+.timeline-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100px;       /* Фиксируем ширину колонки */
+  gap: 8px;          /* Отступ между фото и текстом */
+}
+
+/* Круг-рамка для фото */
+.icon-circle {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%; /* Делает квадрат круглым */
+  overflow: hidden;   /* Обрезает фото по кругу */
+  background-color: #F5F5F5; /* Цвет фона, если фото не загрузится */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Само фото внутри круга */
+.timeline-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ключевое свойство: заполняет круг, не сплющивая фото */
+  display: block;     /* Убирает лишние отступы снизу у картинок */
+}
+
+/* Подпись под фото */
+.timeline-label {
+  font-size: 14px;
+  color: #333;
+  text-align: center;
+  margin: 0;
+}
+.registration-container {
+  width: 100%;
+  max-width: 480px;
+  margin: 40px auto 0 auto; /* Отступ сверху большой, чтобы уйти вниз */
+  padding: 20px;
+}
+
+/* Поля ввода внутри формы тоже центрируем по ширине */
+.registration-form input,
+.registration-form select {
+  width: 100%;
+  margin-bottom: 16px;
+  padding: 12px;
+  box-sizing: border-box;
+}

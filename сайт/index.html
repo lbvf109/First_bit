@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Первые шаги</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="page-wrapper">
+  <div class="layout">
+    <!-- Сайдбар -->
+    <aside class="sidebar">
+      <div class="logo-box">
+        <img src="img/logo-small.png" alt="Логотип" class="logo-img" />
+      </div>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="#">МОЙ ЧЕК ЛИСТ</a></li>
+          <li><a href="#">ПОЛЕЗНОЕ</a></li>
+          <li><a href="#shopping-modal">СПИСОК ПОКУПОК</a></li>
+          <li><a href="#">ТЕХ ПОДДЕРЖКА</a></li>
+        </ul>
+      </nav>
+      <footer class="sidebar-footer">
+        <span>Privacy</span>
+      </footer>
+    </aside>
+
+    <!-- Основной контент -->
+    <main class="content">
+      <!-- Секция с иллюстрацией и заголовком -->
+      <section class="hero">
+        <div class="hero-illustration"></div>
+        
+      </section>
+
+      <!-- Приветственный текст -->
+      <section class="welcome">
+        <p class="welcome-text">
+          Добро пожаловать в ваше личное пространство заботы. Здесь мы собрали все необходимое, чтобы первые месяцы с малышом прошли спокойно и радостно. Никакой лишней информации — только то, что действительно важно для вас и вашего ребенка.
+        </p>
+      </section>
+
+      <!-- Форма регистрации -->
+      <section class="registration">
+        <h2 class="section-title">Регистрация</h2>
+        <p class="section-subtitle">Расскажите о себе и вашем малыше</p>
+        <form class="reg-form">
+          <div class="form-group">
+            <label for="name">Ваше имя</label>
+            <input type="text" id="name" placeholder="Сергей Иванов" />
+          </div>
+          <div class="form-group">
+            <label for="baby-name">Имя малыша</label>
+            <input type="text" id="baby-name" placeholder="Иван Иванович" />
+          </div>
+          <div class="form-group">
+            <label for="phone">Телефон</label>
+            <input type="tel" id="phone" placeholder="+1234 567 8901" />
+          </div>
+          <div class="form-group">
+            <label for="dob">День рождения ребенка</label>
+            <div class="date-input-wrapper">
+              <input type="date" id="dob" />
+              <span class="icon-calendar">📅</span>
+            </div>
+          </div>
+          <button type="submit" class="btn-primary">Регистрация</button>
+        </form>
+      </section>
+
+      <!-- Прогресс-линия -->
+      <section class="progress-line">
+        <h2 class="section-title">Наш прогресс</h2>
+        <div class="progress-items">
+          <div class="timeline-item">
+  <!-- В src укажи путь к твоему файлу (png/jpg) -->
+  <img src="img/day1-photo2.png" alt="1 день" class="timeline-photo">
+  <span class="timeline-label">1 день</span>
+</div>
+          <div class="timeline-item">
+  <img src="img/week1-photo2.png" alt="1 неделя" class="timeline-photo">
+  <span class="timeline-label">1 неделя</span>
+</div>
+          <div class="timeline-item">
+  <img src="img/month1-photo.png" alt="1 месяц" class="timeline-photo">
+  <span class="timeline-label">1 месяц</span>
+</div>
+          <div class="timeline-item">
+  <img src="img/month2-photo.png" alt="2 месяца" class="timeline-photo">
+  <span class="timeline-label">2 месяца</span>
+</div>
+        </div>
+      </section>
+      
+      <!-- Карточка «1 день» -->
+      <section class="day-card">
+        <div class="timeline-item">
+  <!-- В src укажи путь к твоему файлу (png/jpg) -->
+  <img src="img/day1-photo.png" alt="1 день" class="timeline-photo">
+  <span class="timeline-label">1 день</span>
+</div>
+        <h3 class="day-title">1 день</h3>
+        <ul class="day-checklist">
+          <li>Разобраться с документами малыша</li>
+          <li>Обсудить 1 визит педиатра</li>
+          <li>Проверить место для сна</li>
+          <li>Узнать порядок регистрации рождения</li>
+        </ul>
+      </section>
+
+      <!-- Модальное окно "Список покупок" -->
+<div id="shopping-modal" class="modal-overlay">
+  <div class="modal-window">
+    <button type="button" class="modal-close" aria-label="Закрыть" onclick="location.href='#'">×</button>
+    <h2 class="modal-title">Покупки</h2>
+    
+    <div class="stores-grid">
+      <article class="store-card store-card--magnit">
+        <div class="store-card-header">
+        </div>
+        <div class="store-content">
+          <p class="store-desc">Пользователи рекомендуют покупать здесь:</p>
+          <ul class="store-items">
+            <li>Салфетки</li>
+            <li>Молочные смеси</li>
+          </ul>
+        </div>
+        <div class="store-illustration magnit-img"></div>
+      </article>
+
+      <article class="store-card store-card--pyaterochka">
+        <div class="store-card-header">
+        </div>
+        <div class="store-content">
+          <p class="store-desc">Пользователи рекомендуют покупать здесь:</p>
+          <ul class="store-items">
+            <li>Продукты</li>
+            <li>Бытовая химия</li>
+          </ul>
+        </div>
+        <div class="store-illustration pyaterochka-img"></div>
+      </article>
+
+      <article class="store-card store-card--perekrestok">
+        <div class="store-card-header">
+        </div>
+        <div class="store-content">
+          <p class="store-desc">Пользователи рекомендуют покупать здесь:</p>
+          <ul class="store-items">
+            <li>Питание</li>
+            <li>Пелёнки</li>
+          </ul>
+        </div>
+        <div class="store-illustration perekrestok-img"></div>
+      </article>
+
+      <article class="store-card store-card--dm">
+        <div class="store-card-header">
+        </div>
+        <div class="store-content">
+          <p class="store-desc">Пользователи рекомендуют покупать здесь:</p>
+          <ul class="store-items">
+            <li>Игрушки</li>
+            <li>Детские товары</li>
+          </ul>
+        </div>
+        <div class="store-illustration dm-img"></div>
+      </article>
+    </div>
+  </div>
+</div>
+
+    </main>
+    </div>
+  </div>
+</body>
+</html>

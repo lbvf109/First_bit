@@ -127,3 +127,5 @@ MAILERS = {
     },
 }
 STATICFILES_DIRS = [BASE_DIR.parent / 'frontend']
+AUTH_USER_MODEL = "config.User"
+LOGIN_URL = "login"

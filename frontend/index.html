@@ -18,10 +18,10 @@
       </div>
       <nav class="main-nav">
         <ul>
-          <li><a href="#">МОЙ ЧЕК ЛИСТ</a></li>
-          <li><a href="profile.html">ПРОФИЛЬ</a></li>
-          <li><a href="#shopping-modal">СПИСОК ПОКУПОК</a></li>
-          <li><a href="#support-section" class="nav-link">ТЕХ ПОДДЕРЖКА</a></li>
+          <li><a href="{% url 'index' %}">МОЙ ЧЕК ЛИСТ</a></li>
+          <li><a href="{% url 'profile' %}">ПРОФИЛЬ</a></li>
+          <li><a href="{% url 'index' %}#shopping-modal">СПИСОК ПОКУПОК</a></li>
+          <li><a href="{% url 'index' %}#support-section" class="nav-link">ТЕХ ПОДДЕРЖКА</a></li>
         </ul>
       </nav>
       <footer class="sidebar-footer">
@@ -72,8 +72,17 @@
             </div>
             {{ form.baby_birth_date.errors }}
           </div>
+          <div class="form-group">
+            <label for="password1">Пароль</label>
+            {{ form.password1 }} {{ form.password1.errors }}
+          </div>
+          <div class="form-group">
+            <label for="password2">Повторите пароль</label>
+            {{ form.password2 }} {{ form.password2.errors }}
+          </div>
           <button type="submit" class="btn-primary">Регистрация</button>
         </form>
+        <p>Уже есть аккаунт? <a href="{% url 'login' %}">Войти</a></p>
       </section>
 
       <!-- Прогресс-линия -->

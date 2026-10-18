@@ -6,7 +6,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Профиль</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="{% static 'style.css' %}" />
 </head>
 
 <body>
@@ -14,7 +14,7 @@
     <!-- Сайдбар -->
     <aside class="sidebar">
       <div class="logo-box">
-        <img src='{% static "img/logo-small.png"}' alt="Логотип" class="logo-img" />
+        <img src='{% static "img/logo-small.png" %}' alt="Логотип" class="logo-img" />
       </div>
       <nav class="main-nav">
         <ul>
@@ -35,7 +35,7 @@
       <!-- 1. Верхняя карточка профиля -->
       <div class="profile-header-card">
         <div class="profile-avatar-block">
-          <img src='{% static "img/avatar.png"}' alt="Елена Соколова" class="profile-avatar">
+          <img src='{% static "img/avatar.png" %}' alt="Елена Соколова" class="profile-avatar">
           <button class="avatar-edit-btn">✎</button>
         </div>
 
@@ -102,7 +102,7 @@
           <!-- Карточка 1: Статистика ребенка -->
           <div class="child-stats-card">
             <div class="child-header">
-              <img src='{% static "img/child-avatar.png"}' alt="Мирон" class="child-avatar">
+              <img src='{% static "img/child-avatar.png" %}' alt="Мирон" class="child-avatar">
               <div>
                 <h3>Мирон</h3>
                 <p>Мальчик · 14 июня 2024</p>

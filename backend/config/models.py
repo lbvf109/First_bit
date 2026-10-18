@@ -5,7 +5,7 @@ from django.db import models
 
 
 def normalize_phone(raw):
-    """Приводит номер к единому виду: '8 (904) 756-38-08' -> '+79047563808'."""
+
     digits = re.sub(r"\D", "", raw)
     if len(digits) == 11 and digits[0] in "78":
         digits = "7" + digits[1:]

@@ -15,7 +15,7 @@ def index(request):
             return redirect("profile")
     else:
         form = RegistrationForm()
-    return render(request, "index.html", {"form": form})
+    return render(request, "index.html", {"form": form, "nav": "home"})
 
 
 def login_view(request):
@@ -44,4 +44,8 @@ def logout_view(request):
 
 @login_required
 def profile(request):
-    return render(request, "profile.html")
+    return render(request, "profile.html", {"nav": "profile"})
+
+
+def shopping(request):
+    return render(request, "shopping.html", {"nav": "shopping"})

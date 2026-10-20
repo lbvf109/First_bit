@@ -7,7 +7,8 @@
   --accent-brown: #5A3B2E;
   --border-color: #eeeeee;
   --font-main: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  --sidebar-width: 250px; /* Добавлена переменная для ширины сайдбара */
+  --sidebar-width: 250px;
+  /* Добавлена переменная для ширины сайдбара */
 }
 
 * {
@@ -87,8 +88,10 @@ body {
 
 /* Контент */
 .content {
-  margin-left: var(--sidebar-width); /* Отступ равен ширине меню */
-  width: calc(100% - var(--sidebar-width)); /* Занимает оставшееся место */
+  margin-left: var(--sidebar-width);
+  /* Отступ равен ширине меню */
+  width: calc(100% - var(--sidebar-width));
+  /* Занимает оставшееся место */
   padding: 40px;
   background-color: #e4d9c2;
   min-height: 100vh;
@@ -131,14 +134,14 @@ body {
 }
 
 .section-title {
-    text-align: center;
+  text-align: center;
   font-size: 28px;
   font-weight: 700;
   margin-bottom: 8px;
 }
 
 .section-subtitle {
-    text-align: center;
+  text-align: center;
   color: var(--text-secondary);
   margin-bottom: 32px;
 }
@@ -230,7 +233,8 @@ body {
 .timeline-photo {
   width: 100px;
   height: 100px;
-  object-fit: contain; /* Изменено с cover, чтобы не обрезало картинки */
+  object-fit: contain;
+  /* Изменено с cover, чтобы не обрезало картинки */
   display: block;
 }
 
@@ -247,8 +251,9 @@ body {
   background: white;
   padding: 32px;
   border-radius: 16px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.04);
-  margin: 0 auto; /* Центрирование карточки */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+  margin: 0 auto;
+  /* Центрирование карточки */
 }
 
 .day-title {
@@ -468,7 +473,10 @@ body {
   flex-shrink: 0;
 }
 
-.magnit-img, .pyaterochka-img, .perekrestok-img, .dm-img {
+.magnit-img,
+.pyaterochka-img,
+.perekrestok-img,
+.dm-img {
   width: 100%;
   height: 100%;
   background-size: contain;
@@ -481,36 +489,38 @@ body {
   .layout {
     flex-direction: column;
   }
-  
+
   .sidebar {
-    position: static; /* Отменяем фиксацию на мобильных */
+    position: static;
+    /* Отменяем фиксацию на мобильных */
     width: 100%;
     height: auto;
     border-right: none;
     border-bottom: 1px solid var(--border-color);
     padding: 20px;
   }
-  
+
   .content {
-    margin-left: 0; /* Убираем отступ, так как сайдбар теперь сверху */
+    margin-left: 0;
+    /* Убираем отступ, так как сайдбар теперь сверху */
     width: 100%;
     padding: 20px;
   }
-  
+
   .hero {
     flex-direction: column;
     text-align: center;
   }
-  
+
   .hero-illustration {
     width: 100%;
     max-width: 240px;
   }
-  
+
   .progress-items {
     justify-content: center;
   }
-  
+
   .stores-grid {
     grid-template-columns: 1fr;
   }
@@ -529,8 +539,10 @@ html {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  overflow: hidden; /* Важно: чтобы картинка не вылезала за скругленные углы */
-  padding: 0;       /* Убираем отступы, чтобы картинка занимала всю карточку */
+  overflow: hidden;
+  /* Важно: чтобы картинка не вылезала за скругленные углы */
+  padding: 0;
+  /* Убираем отступы, чтобы картинка занимала всю карточку */
   min-height: 220px;
   position: relative;
 }
@@ -539,18 +551,21 @@ html {
 .store-photo {
   width: 100%;
   height: 100%;
-  object-fit: contain; /* Картинка заполнит всю карточку, обрезав лишнее по краям */
+  object-fit: contain;
+  /* Картинка заполнит всю карточку, обрезав лишнее по краям */
   display: block;
 }
 
 /* Если вы оставили заголовок (h3), добавьте для него стили */
 .store-name {
-  position: absolute; /* Наложим текст поверх картинки */
+  position: absolute;
+  /* Наложим текст поверх картинки */
   top: 12px;
   left: 12px;
   z-index: 2;
   color: #333;
-  background-color: rgba(255, 255, 255, 0.8); /* Полупрозрачный фон для читаемости */
+  background-color: rgba(255, 255, 255, 0.8);
+  /* Полупрозрачный фон для читаемости */
   padding: 4px 8px;
   border-radius: 6px;
   font-size: 14px;
@@ -566,17 +581,20 @@ html {
 .pyaterochka-img,
 .perekrestok-img,
 .dm-img {
-  display: none; /* Скрываем их, так как мы заменили их на img */
+  display: none;
+  /* Скрываем их, так как мы заменили их на img */
 }
 
 .progress-items {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start; /* Выравниваем по верху, чтобы линия была на одной высоте */
+  align-items: flex-start;
+  /* Выравниваем по верху, чтобы линия была на одной высоте */
   margin-top: 32px;
   padding: 0 16px;
   gap: 20px;
-  flex-wrap: nowrap; /* Запрещаем перенос элементов на десктопе */
+  flex-wrap: nowrap;
+  /* Запрещаем перенос элементов на десктопе */
   position: relative;
 }
 
@@ -586,7 +604,8 @@ html {
   align-items: center;
   justify-content: center;
   gap: 8px;
-  flex: 1; /* Элементы занимают равное пространство */
+  flex: 1;
+  /* Элементы занимают равное пространство */
   position: relative;
 }
 
@@ -608,7 +627,7 @@ html {
 }
 
 /* Убеждаемся, что картинки и подписи находятся ПОВЕРХ линии */
-.timeline-photo, 
+.timeline-photo,
 .timeline-label {
   position: relative;
   z-index: 1;
@@ -616,26 +635,32 @@ html {
 
 @media (max-width: 600px) {
   .progress-items {
-    flex-wrap: wrap; /* Разрешаем перенос */
+    flex-wrap: wrap;
+    /* Разрешаем перенос */
   }
-  
+
   .timeline-item:not(:last-child)::after {
-    display: none; /* Скрываем линию на мобильных */
+    display: none;
+    /* Скрываем линию на мобильных */
   }
 }
 
 /* Добавьте это в style.css */
 
 .day-checklist li {
-  cursor: pointer; /* Меняет курсор на "руку" при наведении */
+  cursor: pointer;
+  /* Меняет курсор на "руку" при наведении */
   transition: color 0.2s ease, opacity 0.2s ease;
-  user-select: none; /* Чтобы текст не выделялся при клике */
+  user-select: none;
+  /* Чтобы текст не выделялся при клике */
 }
 
 /* Стиль для выполненной задачи */
 .day-checklist li.completed {
-  text-decoration: line-through; /* Зачеркивает текст */
-  color: #999999; /* Делает текст бледнее */
+  text-decoration: line-through;
+  /* Зачеркивает текст */
+  color: #999999;
+  /* Делает текст бледнее */
   opacity: 0.7;
 }
 
@@ -653,7 +678,7 @@ html {
   padding: 30px;
   margin-bottom: 30px;
   gap: 30px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
   position: relative;
 }
 
@@ -667,7 +692,7 @@ html {
   border-radius: 50%;
   object-fit: cover;
   border: 4px solid #fff;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .avatar-edit-btn {
@@ -677,7 +702,8 @@ html {
   width: 32px;
   height: 32px;
   border-radius: 50%;
-  background: #c17a5c; /* Цвет кнопки редактирования */
+  background: #c17a5c;
+  /* Цвет кнопки редактирования */
   color: white;
   border: 2px solid #fff;
   cursor: pointer;
@@ -799,7 +825,8 @@ html {
 /* 3. Сетка контента */
 .profile-grid {
   display: grid;
-  grid-template-columns: 2fr 1fr; /* Левая колонка шире правой */
+  grid-template-columns: 2fr 1fr;
+  /* Левая колонка шире правой */
   gap: 24px;
 }
 
@@ -809,7 +836,7 @@ html {
   border-radius: 16px;
   padding: 24px;
   border: 1px solid #484747;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
 }
 
 .appt-header {
@@ -966,14 +993,17 @@ html {
     flex-direction: column;
     text-align: center;
   }
+
   .profile-location {
     justify-content: center;
   }
+
   .profile-actions {
     width: 100%;
     justify-content: center;
     flex-wrap: wrap;
   }
+
   .profile-grid {
     grid-template-columns: 1fr;
   }
@@ -987,16 +1017,18 @@ html {
 .profile-sidebar-column {
   display: flex;
   flex-direction: column;
-  gap: 24px; /* Расстояние между карточкой ребенка и личными данными */
+  gap: 24px;
+  /* Расстояние между карточкой ребенка и личными данными */
 }
 
 /* 2. Сама карточка "Личные данные" */
 .personal-data-card {
-  background: #FDF6E3; /* Бежевый фон, как на скриншоте */
+  background: #FDF6E3;
+  /* Бежевый фон, как на скриншоте */
   border-radius: 16px;
   padding: 24px;
   border: 1px solid #484747;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
 }
 
 .personal-data-card h3 {
@@ -1023,7 +1055,8 @@ html {
 .data-icon {
   width: 24px;
   height: 24px;
-  color: #8a735c; /* Коричневый цвет иконок */
+  color: #8a735c;
+  /* Коричневый цвет иконок */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1033,7 +1066,8 @@ html {
 .data-icon svg {
   width: 18px;
   height: 18px;
-  fill: currentColor; /* Иконка красится в цвет родителя */
+  fill: currentColor;
+  /* Иконка красится в цвет родителя */
 }
 
 /* 5. Текстовый блок */
@@ -1063,42 +1097,47 @@ html {
 /* 6. Убедимся, что сетка профиля работает правильно */
 .profile-grid {
   display: grid;
-  grid-template-columns: 2fr 1fr; /* Левая колонка в 2 раза шире правой */
+  grid-template-columns: 2fr 1fr;
+  /* Левая колонка в 2 раза шире правой */
   gap: 24px;
 }
 
 /* Адаптив для мобильных */
 @media (max-width: 900px) {
   .profile-grid {
-    grid-template-columns: 1fr; /* На мобильных одна колонка */
+    grid-template-columns: 1fr;
+    /* На мобильных одна колонка */
   }
 }
 
 /* Исправление высоты карточки записи к врачу */
 .profile-grid {
-  align-items: start; /* Отменяет растягивание элементов по высоте */
+  align-items: start;
+  /* Отменяет растягивание элементов по высоте */
 }
 
 /* На всякий случай убеждаемся, что левая карточка не тянется */
 .appointment-card {
   align-self: start;
-  height: fit-content; /* Высота строго по содержимому */
+  height: fit-content;
+  /* Высота строго по содержимому */
 }
 
-/* ==========================================================================
-   АДАПТАЦИЯ МОДАЛЬНОГО ОКНА "СПИСОК ПОКУПОК" ПОД МОБИЛЬНЫЕ УСТРОЙСТВА
-   ========================================================================== */
 
-/* 1. Модальное окно: убираем лишние отступы и растягиваем на весь экран */
+
+
 @media (max-width: 768px) {
   .modal-window {
     width: 100%;
     max-width: 100%;
     height: 100%;
     max-height: 100vh;
-    border-radius: 0; /* Убираем скругления, чтобы окно занимало весь экран */
-    padding: 60px 16px 24px 16px; /* Отступ сверху под кнопку закрытия */
-    overflow-y: auto; /* Разрешаем прокрутку, если контент не помещается */
+    border-radius: 0;
+    /* Убираем скругления, чтобы окно занимало весь экран */
+    padding: 60px 16px 24px 16px;
+    /* Отступ сверху под кнопку закрытия */
+    overflow-y: auto;
+    /* Разрешаем прокрутку, если контент не помещается */
     transform: none;
   }
 
@@ -1106,7 +1145,7 @@ html {
     transform: none;
   }
 
-  /* Кнопка закрытия — фиксируем в углу */
+
   .modal-close {
     position: fixed;
     top: 12px;
@@ -1119,25 +1158,26 @@ html {
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
   }
 
-  /* Заголовок модалки */
+
   .modal-title {
     font-size: 24px;
     margin-bottom: 16px;
   }
 
-  /* 2. Сетка магазинов — одна колонка */
+
   .stores-grid {
     grid-template-columns: 1fr;
     gap: 16px;
     padding: 0;
   }
 
-  /* 3. Карточка магазина */
+
   .store-card {
-    min-height: auto; /* Убираем фиксированную высоту */
+    min-height: auto;
+
     padding: 16px;
     gap: 12px;
     display: flex;
@@ -1146,17 +1186,18 @@ html {
     justify-content: flex-start;
   }
 
-  /* Если вы используете картинку вместо текста */
+
   .store-photo {
     width: 100%;
     height: auto;
     max-height: 180px;
-    object-fit: contain; /* Картинка целиком, не обрезается */
+    object-fit: contain;
+
     display: block;
     border-radius: 8px;
   }
 
-  /* Если остались текстовые блоки (заголовок, список) */
+
   .store-desc {
     font-size: 13px;
     text-align: center;
@@ -1167,16 +1208,14 @@ html {
     text-align: center;
   }
 
-  /* Иллюстрации (старый вариант с background-image) */
+
   .store-illustration {
     width: 100%;
     height: 140px;
   }
 }
 
-/* ==========================================================================
-   ДОПОЛНИТЕЛЬНО: очень узкие экраны (до 400px)
-   ========================================================================== */
+
 @media (max-width: 400px) {
   .modal-title {
     font-size: 20px;
@@ -1189,4 +1228,88 @@ html {
   .store-items li {
     font-size: 14px;
   }
+}
+
+.main-nav a.active {
+  color: var(--accent-orange);
+}
+
+.user-mini {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+}
+
+.user-mini-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.user-mini-name {
+  font-size: 13px;
+  color: var(--text-main);
+}
+
+.shopping-title {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.shopping-subtitle {
+  text-align: center;
+  color: var(--text-secondary);
+  margin-bottom: 32px;
+}
+
+.store-logo-wrap {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+
+.store-logo-wrap img {
+  max-width: 120px;
+  max-height: 60px;
+  object-fit: contain;
+}
+
+.store-name {
+  font-size: 18px;
+  color: var(--accent-brown);
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.store-review {
+  font-size: 13px;
+  color: #666;
+  line-height: 1.5;
+  margin-bottom: 12px;
+}
+
+.modal-overlay.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.home-logo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.home-logo img {
+  max-width: 420px;
+  width: 100%;
+  height: auto;
+}
+
+.main-wrapper {
+  width: calc(100% - var(--sidebar-width));
 }

@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Список покупок — Первые шаги{% endblock %}
+
+{% block content %}
+<main class="content">
+    <h2 class="shopping-title">Покупки</h2>
+    <p class="shopping-subtitle">Что советуют покупать другие родители</p>
+
+    <div class="stores-grid">
+
+        <article class="store-card">
+            <div class="store-logo-wrap">
+                <img src="{% static 'img/magnit-logo.png' %}" alt="Магнит">
+            </div>
+            <h3 class="store-name">Магнит</h3>
+            <p class="store-review">
+                Родители отмечают широкий выбор товаров для новорождённых и удобные часы работы.
+                Часто бывают акции на подгузники и детское питание.
+            </p>
+            <ul class="store-items">
+                <li>Салфетки влажные</li>
+                <li>Молочные смеси</li>
+                <li>Подгузники</li>
+            </ul>
+        </article>
+
+        <article class="store-card">
+            <div class="store-logo-wrap">
+                <img src="{% static 'img/pyaterochka-logo.png' %}" alt="Пятёрочка">
+            </div>
+            <h3 class="store-name">Пятёрочка</h3>
+            <p class="store-review">
+                Хвалят за свежие продукты и доступные цены. Удобно закупаться на неделю —
+                есть всё, включая бытовую химию.
+            </p>
+            <ul class="store-items">
+                <li>Продукты</li>
+                <li>Бытовая химия</li>
+                <li>Детское мыло</li>
+            </ul>
+        </article>
+
+        <article class="store-card">
+            <div class="store-logo-wrap">
+                <img src="{% static 'img/perekrestok-logo.png' %}" alt="Перекрёсток">
+            </div>
+            <h3 class="store-name">Перекрёсток</h3>
+            <p class="store-review">
+                Советуют за качественные продукты и широкий ассортимент детского питания.
+                Есть отдел органики.
+            </p>
+            <ul class="store-items">
+                <li>Детское питание</li>
+                <li>Пелёнки</li>
+                <li>Пюре</li>
+            </ul>
+        </article>
+
+        <article class="store-card">
+            <div class="store-logo-wrap">
+                <img src="{% static 'img/dm-logo.png' %}" alt="Детский мир">
+            </div>
+            <h3 class="store-name">Детский мир</h3>
+            <p class="store-review">
+                Самый популярный магазин среди родителей. Огромный выбор игрушек, одежды
+                и детских товаров, часто бывают скидки.
+            </p>
+            <ul class="store-items">
+                <li>Игрушки</li>
+                <li>Детские товары</li>
+                <li>Одежда</li>
+            </ul>
+        </article>
+
+    </div>
+</main>
+{% endblock %}
